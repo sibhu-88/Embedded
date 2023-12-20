@@ -12,6 +12,7 @@ int main() {
     printf("Enter the Number : ");
     scanf("%d", &num);
 
+    printf("Binary of %d before execute\n", num);
     for (int pos1 = sizeof(num) * 8 - 1; pos1 >= 0; pos1--)
         printf("%d", (num >> pos1) & 1);
     printf("\n");
@@ -29,11 +30,11 @@ int main() {
         default: printf("You didn't select any options\n"); break;
     }
 
+
+    printf("Binary of %d after execute\n", num);
     for (int pos1 = sizeof(num) * 8 - 1; pos1 >= 0; pos1--)
         printf("%d", (num >> pos1) & 1);
     printf("\n");
-
-    printf("Binary of %d\n", num);
 
     return 0;
 }
