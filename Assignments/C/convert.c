@@ -13,26 +13,6 @@ int main() {
     } else {
         printf("PLEASE CHECK THE GIVEN CHAR IS NON-ALPHABET\n");
     }
-
-/*
-    if (ch>=65&&90>=ch)
-    {
-        x=ch-65;
-        ch=97+x;
-        printf("%c\n",ch);
-    }
-    else if (ch>=97&&122>=ch)
-    {
-        x=ch-97;
-        ch=65+x;
-        printf("%c\n",ch);
-    }
-    else
-    {
-        printf("PLEASE CHECH THE GIVEN CHAR IS NON-ALPHAABET");
-    }
-*/  
-
     return 0;
 
 }
