@@ -25,7 +25,7 @@ int main() {
 
     switch (op) {
         case 1: num |= (1 << pos); break;
-        case 2: if (num >> pos & 1) num ^= (1 << pos); break;
+        case 2: num &= ~(1 << pos); break;
         case 3: num ^= (1 << pos); break;
         default: printf("You didn't select any options\n"); break;
     }
