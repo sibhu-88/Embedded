@@ -9,6 +9,7 @@ int main() {
 
     if ((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z')) {
         ch ^= (1 << 5); // Toggle the 5th bit to convert case
+        //ch &= ~(1<<5);
         printf("%c\n", ch);
     } else {
         printf("PLEASE CHECK THE GIVEN CHAR IS NON-ALPHABET\n");
