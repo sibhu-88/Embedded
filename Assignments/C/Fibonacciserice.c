@@ -18,6 +18,7 @@ int main()
         y=z;
     }
 
+    /*
     while (i++,i<=n)
     {
         z=x+y;
@@ -25,6 +26,19 @@ int main()
         x=y;
         y=z;
     }
+    */
+
+    /*
+        //print continus values
+    for ( i; x < n; i++)
+    {
+        z=x+y;
+        printf("%d, ",x);
+        x=y;
+        y=z;
+    }   
+*/
+
     
     printf("\n");
 }
