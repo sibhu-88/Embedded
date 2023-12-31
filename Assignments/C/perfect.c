@@ -1,3 +1,5 @@
+//check the given number is perfect number or not.
+
 #include<stdio.h>
 
 void checkPerfect(int);
