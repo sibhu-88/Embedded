@@ -2,8 +2,6 @@
 
 #include<stdio.h>
 
-int checkPerfect(int, int);
-
 int main() {
     int i,sum,num=1,num1=100000;
 

@@ -9,19 +9,18 @@ int main()
       for (j = 2; j < i; j++)
       {
         if ((i%j)==0)
-            break;
-       }
+          break;
+      }
 
-       if (j==i)
-       {
-            count++;
-		if(count==50)
-{
-       		printf("%d, ",j);
-}
-       }
-       i++;
-     }
-        printf("\n");
+      if (j==i)
+      {
+        count++;
+        if(count==50)
+        printf("%d, ",j);
+      }
+      i++;
+    }
+
+    printf("\n");
 }
 
