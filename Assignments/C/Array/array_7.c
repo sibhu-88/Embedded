@@ -3,24 +3,34 @@
 #include<stdio.h>
 int main()
 {
-    int i,j,k,l,a[5],count;
+    int i,j,a[5],count;
 
-    int ele = sizeof a/sizeof a[0];
+    int n = sizeof a/sizeof a[0];
 
     printf("Enter the array values : ");
-    for ( i = 0; i < ele; i++) 
+    for ( i = 0; i < n; i++) 
     scanf("%d",&a[i]);
 
-    for ( i = 0; i < ele; i++)
+    for ( i = 0; i < n; i++)
     {
-        
-            for ( k = 0,count=0; k < ele; k++)
+        count=1;
+        for ( j = 0; j < i; j++)
+        {
+            if (a[i]==a[j])
+            break;
+        }
+
+        if (j==i)
+        {
+            for (j=i+1; j < n; j++)
             {
-                if (a[i]==a[k])
+                if (a[i]==a[j])
                 count++;
+                
             }
-            
             printf("%d is present ===> %d\n",a[i],count);
+        }
     }
+    return 0;
 }
 
