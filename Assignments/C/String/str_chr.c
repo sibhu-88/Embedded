@@ -20,6 +20,10 @@ void str_chr(char *s,char ch)
 {
     int i,j;
 
+    printf("\ngiven string ==> %s \n\n",s);
+    printf("string base address ==> %p  \n",s);
+
+    printf("\n");
     for ( i = 0; s[i] ; i++)
     {
         if (ch==s[i])

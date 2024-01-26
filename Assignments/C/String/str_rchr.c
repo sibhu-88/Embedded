@@ -22,6 +22,13 @@ void str_rchr(char *s,char ch)
 
     for ( i = 0; s[i]; i++);
 
+    printf("given string ==> %s \n",s);
+
+    printf("string base address ==> %p  ",s);
+
+    printf("\n");
+    
+
     for ( j = i-1; j>=0; j--)
     {
         if (ch==s[j])
