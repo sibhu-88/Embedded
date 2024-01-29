@@ -2,18 +2,18 @@
 
 #include<stdio.h>
 
-void copy(char *,char *);
+void str_cpy(char *,char *);
 int main() {
     char s[20],b[20];
 
     printf("Enter the string : ");
     scanf("%s",s);
 
-    copy(s,b);
+    str_cpy(s,b);
     
 }
 
-void copy(char *b,char *s)
+void str_cpy(char *b,char *s)
 {
     int i;
 
