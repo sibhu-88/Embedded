@@ -28,4 +28,8 @@ void str_cat(char *b,char *s)
     printf("\n");
     for ( i = 0; s[i] ; i++)
     b[j+i]=s[i];
+
+    //strcpy(b+strlen(b),s)
+
+    return b;
 }
