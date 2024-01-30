@@ -2,7 +2,7 @@
 
 #include<stdio.h>
 
-void str_rchr(char *,char );
+char *str_rchr(char *,char );
 int main() {
     char s[50],ch;
     int n;
@@ -13,30 +13,25 @@ int main() {
     printf("Enter the elemet you want to check address : ");
     scanf(" %c",&ch);
 
-    str_rchr(s,ch);
+    printf("given string ==> %s \n",s);
+    printf("string base address ==> %p  \n",s);
+
+    char *p = str_rchr(s,ch);
+
+    printf("The Given element %c address is : %p",ch,p); 
+    printf("\n");
+    
 }
 
-void str_rchr(char *s,char ch)
+char *str_rchr(char *s,char ch)
 {
     int i,j;
 
     for ( i = 0; s[i]; i++);
-
-    printf("given string ==> %s \n",s);
-
-    printf("string base address ==> %p  ",s);
-
-    printf("\n");
-    
-
     for ( j = i-1; j>=0; j--)
     {
         if (ch==s[j])
-        {
-            printf("The Given element %c address is : %p",ch,s+j); 
-            break; 
-        }
+        return s+i;
     }
-    
-    printf("\n");
+    return NULL;
 }
