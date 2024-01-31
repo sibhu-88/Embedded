@@ -29,15 +29,14 @@ int main()
 char *str_cmp(char *s1, char *s2, int n) //==> user-define function;
 {
     int i;
-    for ( i = 0; i < n ; i++)
+    for ( i = 0; (i < n )&&s[i]&&s[i]; i++)
     {
         if (s1[i]!=s2[i])
         break;
     }
 
     if (i==n)
-    s1[i] = s2[i] = '\0';
-
-    int rst = s1[i] - s2[i];
-    return rst;
+    return 0;
+    else
+    return s1[i] - s2[i];
 }
