@@ -31,7 +31,7 @@ char *str_rchr(char *s,char ch)
     for ( j = i-1; j>=0; j--)
     {
         if (ch==s[j])
-        return s+i;
+        return s+j;
     }
     return NULL;
 }
