@@ -1,73 +1,67 @@
 #include<LPC21XX.H>
-#include<string.h>
-#include"Header\delay.h"
+#include"E:\v23ce5s9\SIVA\ARM\EMBEDDED\Header\delay.h"
 
 #define LCD 0xff
 #define RS 1<<8
 #define E 1<<9
 
-void LCD_Init( void );
-void LCD_Cmd(U8);
-void LCD_Display(U8);
-void LCD_Str(U8 *);
-void LCD_Rotation(U8 *);
-
+void lcd_init( void );
+void lcd_cmd(U32);
+void lcd_display(U8);
+void lcd_str(U8 *);
+void lcd_rotation(U8 *);
 
 int main(){
-	LCD_Init();
-	LCD_Rotation('S');
+
+	lcd_init();
+//	lcd_display('s');
+	lcd_rotation("SIVA");
 }
 
-void LCD_Init( void )
-{
-	IODIR0 = LCD | RS | E;
-	LCD_Cmd(0X01);
-	LCD_Cmd(0X02);
-	LCD_Cmd(0x0c);
-	LCD_Cmd(0X38);
-	LCD_Cmd(0x80);
-}
-
-void LCD_Cmd(U32 C){
+void lcd_init( void ){
 	
+	IODIR0 = LCD | RS | E;
+	lcd_cmd(0X01);
+	lcd_cmd(0X02);
+	lcd_cmd(0x0c);
+	lcd_cmd(0X38);
+	lcd_cmd(0x80);
+}
+
+void lcd_cmd(U32 C){
+
 	IOCLR0 = LCD ;
 	IOSET0 = C ;
 	IOCLR0 = RS ;
 	IOSET0 = E ;
 	delay_milisec(2);
 	IOCLR0 = E ;
-	
 }
 
-void LCD_Display(U8 D){
+void lcd_display(U8 C){
+
 	IOCLR0 = LCD ;
-	IOSET0 = D ;
+	IOSET0 = C ;
 	IOSET0 = RS ;
 	IOSET0 = E ;
 	delay_milisec(2);
 	IOCLR0 = E ;
 }
 
-void LCD_Str(U8 *S)
-{
-    while (*S)
-    LCD_Display(*S++);
+void lcd_str(U8 *C){
+	while(*C){
+		lcd_display(*C++);
+	}
 }
 
-void LCD_Rotation(U8 *R)
-{
-    int i;
-    while (1)
-    {
-       for ( i = 0; i <= 16; i++)
-       {
-            LCD_Str(*R);
-       }
-       if (i==17)
-       {
-            LCD_Cmd(0x80);
-            for ( i = strlen(R); i >= 0 ; i--)
-            LCD_Display(*R[i]);    
-       }
-    }
+void lcd_rotation(U8 *R){
+	int i;
+	while(1){
+		for(i=0; i <= 16; i++)
+		{
+			lcd_cmd(0x80+i);
+			lcd_str(R);
+			delay_milisec(500);
+		}
+	}
 }
