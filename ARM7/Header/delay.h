@@ -1,4 +1,4 @@
-typedef unsigned int U32;
+#include"typedef.h"
 
 void delay_sec(U32 sec)
 {
