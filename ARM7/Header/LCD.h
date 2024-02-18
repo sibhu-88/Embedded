@@ -47,7 +47,7 @@ void lcd_str(U8 *S) {
         lcd_display(*S++);
         ct++;
         if (ct == 16)
-            lcd_cmd(0x0C); // Move to second line
+            lcd_cmd(0xC0); // Move to second line
     }
 }
 
