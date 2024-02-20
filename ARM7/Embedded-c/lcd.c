@@ -1,5 +1,5 @@
 #include <LPC21XX.H>  // Include LPC21XX header file
-#include "E:\v23ce5s9\SIVA\ARM\EMBEDDED\Header\delay.h"  // Include delay header file
+#include "./delay.h"  // Include delay header file
 
 int main() {
     // Initialize LCD

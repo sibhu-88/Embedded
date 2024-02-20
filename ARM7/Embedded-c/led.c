@@ -1,5 +1,5 @@
 #include <LPC21XX.H>
-#include "delay.h"
+#include "./delay.h"
 
 #define LED1 (1 << 17)
 #define LED2 (1 << 18)

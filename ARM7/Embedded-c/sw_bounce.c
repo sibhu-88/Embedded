@@ -1,7 +1,7 @@
 #include <LPC21xx.H>
-#include"E:\v23ce5s9\SIVA\ARM\EMBEDDED\Header\delay.h"
-#include"E:\v23ce5s9\SIVA\ARM\EMBEDDED\Header\typedef.h"
-#include"E:\v23ce5s9\SIVA\ARM\EMBEDDED\Header\4bit_lcd.h"
+#include"./delay.h"
+#include"./typedef.h"
+#include"./4bit_lcd.h"
 
 #define SW 14
 #define READPIN(VAR,BIT) ((VAR >> BIT)&1)
