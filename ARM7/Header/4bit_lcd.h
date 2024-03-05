@@ -1,3 +1,6 @@
+#include"A:\Siva\Embedded\ARM7\Header\typedef.h"
+#include"A:\Siva\Embedded\ARM7\Header\delay.h"
+
 #define LCD 0x0f<<20
 #define RS 1<<17
 #define RW 1<<18

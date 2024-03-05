@@ -25,10 +25,25 @@ void COUNT(void)
 
     for ( i = 0; i <= 9; i++)
     {
+        IOCLR0 = SEV_SEG;
+        IOSET0 = (SEG_LUT[i]<<2);
+        IOCLR0 = SEG_1;
+        delay_milisec(5);
+        IOSET0 = SEG_1;
         for ( j = 0; j <= 9; j++)
         {
+            IOCLR0 = SEV_SEG;
+            IOSET0 = (SEG_LUT[j]<<2);
+            IOCLR0 = SEG_2;
+            delay_milisec(5);
+            IOSET0 = SEG_2;
             for ( k = 0; k <= 9; k++)
             {
+                IOCLR0 = SEV_SEG;
+                IOSET0 = (SEG_LUT[k]<<2);
+                IOCLR0 = SEG_3;
+                delay_milisec(5);
+                IOSET0 = SEG_3; 
                 for ( l = 0; l <= 9; l++)
                 {
                     IOCLR0 = SEV_SEG;
@@ -36,26 +51,10 @@ void COUNT(void)
                     IOCLR0 = SEG_4;
                     delay_milisec(5);
                     IOSET0 = SEG_4;
-                }
-                IOCLR0 = SEV_SEG;
-                IOSET0 = (SEG_LUT[k]<<2);
-                IOCLR0 = SEG_3;
-                delay_milisec(5);
-                IOSET0 = SEG_3;                
+                }               
             }
-            IOCLR0 = SEV_SEG;
-            IOSET0 = (SEG_LUT[j]<<2);
-            IOCLR0 = SEG_2;
-            delay_milisec(5);
-            IOSET0 = SEG_2;
         }
-        IOCLR0 = SEV_SEG;
-        IOSET0 = (SEG_LUT[i]<<2);
-        IOCLR0 = SEG_1;
-        delay_milisec(5);
-        IOSET0 = SEG_1;
     }
-    
 }
 
 void TIMER(void)
