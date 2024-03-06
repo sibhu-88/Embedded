@@ -1,3 +1,4 @@
+#include"A:\Siva\Embedded\ARM7\Header\typedef.h"
 
 void delay_sec(U32 sec) {
     T0PR = 15000000 - 1;
