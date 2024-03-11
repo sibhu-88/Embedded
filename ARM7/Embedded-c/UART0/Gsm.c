@@ -7,7 +7,7 @@ Date      : 06/03/2024
 #include <LPC21XX.H>
 #include "A:\Siva\Embedded\ARM7\Header\delay.h"
 
-#define NUMBER "1234567890" // Define recipient phone number
+#define NUMBER "9488289487" // Define recipient phone number
 
 // Function prototypes
 void UART0_INIT(void);
@@ -28,19 +28,20 @@ int main() {
 
 // Send SMS using GSM module
 void GSM_SMS(unsigned char *num1, unsigned char *msg) {
+	delay_milisec(2000);
     // Send "AT" command to check connection
-    UART0_STR("AT");
+    UART0_STR("AT\r\n");
     delay_milisec(500); // Delay to allow GSM module to process command
 
     // Set SMS text mode
-    UART0_STR("AT+CMGF=1");
+    UART0_STR("AT+CMGF=1\r\n");
     delay_milisec(500);
 
     // Send recipient's phone number
-    UART0_STR("AT+CMGS=\"");
+    UART0_STR("AT+CMGS=\"+91");
     while (*num1)
         UART0_TX(*num1++); // Send each character of the phone number
-    UART0_TX('"'); // End of phone number
+    UART0_STR("\"\r\n"); // End of phone number
     delay_milisec(500);
 
     // Send message content
