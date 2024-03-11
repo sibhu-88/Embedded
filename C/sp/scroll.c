@@ -13,8 +13,7 @@ int main()
         for ( i--; 0 <= i; i--)
             scroll(i);
         
-    }
-    
+    } 
 }
 
 void scroll(int i)
@@ -29,5 +28,4 @@ void scroll(int i)
     puts("SIVA PRABHU");
     printf("\n\n\n\n\n\n\n\n");
     usleep(80000);
-    
 }
