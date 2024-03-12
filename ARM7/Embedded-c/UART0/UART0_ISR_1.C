@@ -1,3 +1,8 @@
+/**********************************************************
+Expt. *** : Receive and re-transmit the char serially UART using interrupt and main line code to control LED with to LPC2129
+Platform  : LPC2129 Development Board.
+Date      : 11/03/24
+**********************************************************/
 #include<lpc21xx.h>
 #include"A:\Siva\Embedded\ARM7\Header\4bit_lcd.h"
 
