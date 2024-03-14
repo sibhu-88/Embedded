@@ -20,7 +20,7 @@ void UART0_ISR(void) __irq{
     if ((U0LSR&1)==1)
 		{
 			U0THR = U0RBR;
-			LCD_DATA = U0RBR;	
+			LCD_DATA(U0RBR);	
     }
     VICVectAddr =0;
 }
