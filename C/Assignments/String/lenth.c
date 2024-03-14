@@ -1,18 +1,17 @@
-//WAPT find the string lenth
+// WAPT find the string lenth
 
-#include<stdio.h>
+#include <stdio.h>
 
 int main()
 {
     char name[100];
-    int i,count=0;
+    int i, count = 0;
 
     printf("Enter the string : ");
-    scanf("%s",name);
+    scanf("%s", name);
 
-    for ( i = 0; name[i]; i++)
-    count++;
-    
+    for (i = 0; name[i]; i++)
+        count++;
 
-    printf("no.of strings : %d\n",count);
+    printf("no.of strings : %d\n", count);
 }

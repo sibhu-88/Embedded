@@ -1,21 +1,20 @@
-//WRITE A PROG TO PRINT 'N' NUMBER OF FIBONACCI SERIES VALUES.
+// WRITE A PROG TO PRINT 'N' NUMBER OF FIBONACCI SERIES VALUES.
 
-#include<stdio.h>
+#include <stdio.h>
 
 int main()
 {
-    int x=0,y=1,z,n,i=0;
+    int x = 0, y = 1, z, n, i = 0;
 
     printf("Enter the number you want print continuesly : ");
-    scanf("%d",&n);
+    scanf("%d", &n);
 
-
-    for ( i; i < n; i++)
+    for (i; i < n; i++)
     {
-        z=x+y;
-        printf("%d, ",x);
-        x=y;
-        y=z;
+        z = x + y;
+        printf("%d, ", x);
+        x = y;
+        y = z;
     }
 
     /*
@@ -36,9 +35,8 @@ int main()
         printf("%d, ",x);
         x=y;
         y=z;
-    }   
+    }
 */
 
-    
     printf("\n");
 }

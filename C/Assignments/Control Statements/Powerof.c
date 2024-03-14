@@ -1,12 +1,13 @@
-//Wap to impliment a user implement power function.
+// Wap to impliment a user implement power function.
 
-#include<stdio.h>
+#include <stdio.h>
 
-int power(int base, int exponent) {
-    if (exponent == 0) 
+int power(int base, int exponent)
+{
+    if (exponent == 0)
     {
         int result = 1;
-        while (exponent > 0) 
+        while (exponent > 0)
         {
             result *= base;
             exponent--;
@@ -15,7 +16,8 @@ int power(int base, int exponent) {
     return result;
 }
 
-int main() {
+int main()
+{
     int base, exponent, result;
 
     printf("Enter the base and exponent: ");

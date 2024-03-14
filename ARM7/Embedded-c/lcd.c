@@ -1,7 +1,8 @@
-#include <LPC21XX.H>  // Include LPC21XX header file
-#include "./delay.h"  // Include delay header file
+#include <LPC21XX.H> // Include LPC21XX header file
+#include "./delay.h" // Include delay header file
 
-int main() {
+int main()
+{
     // Initialize LCD
     lcd_init();
 

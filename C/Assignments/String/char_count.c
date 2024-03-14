@@ -1,24 +1,24 @@
-//wap to find the given char count in the given string.
+// wap to find the given char count in the given string.
 
-#include<stdio.h>
+#include <stdio.h>
 
-void copy(char *,char *);
-int main() {
-    char s[20],b;
-    int count=0,i;
-
-    printf("Enter the string : ");
-    scanf("%[^\n]",s);
+void copy(char *, char *);
+int main()
+{
+    char s[20], b;
+    int count = 0, i;
 
     printf("Enter the string : ");
-    scanf(" %c",&b);
+    scanf("%[^\n]", s);
 
-    for ( i = 0; s[i]; i++)
+    printf("Enter the string : ");
+    scanf(" %c", &b);
+
+    for (i = 0; s[i]; i++)
     {
-        if (s[i]==b)
-        count++; 
+        if (s[i] == b)
+            count++;
     }
-    
-    printf("%c ----> %d\n",b,count);
 
+    printf("%c ----> %d\n", b, count);
 }

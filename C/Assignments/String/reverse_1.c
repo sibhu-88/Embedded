@@ -1,31 +1,32 @@
-//wap to revers the given string.
+// wap to revers the given string.
 
-#include<stdio.h>
+#include <stdio.h>
 
 void reverse(char *);
-int main() {
+int main()
+{
     char s[20];
 
     printf("Enter the string : ");
-    scanf("%s",s);
+    scanf("%s", s);
 
     reverse(s);
-    
 }
 
 void reverse(char *s)
 {
-    int i,j,k,temp;
+    int i, j, k, temp;
 
-    for ( k = 0; s[k]; k++);
+    for (k = 0; s[k]; k++)
+        ;
 
-    for ( i = 0,j=k-1; i < j; i++,j--)
+    for (i = 0, j = k - 1; i < j; i++, j--)
     {
         temp = s[i];
         s[i] = s[j];
         s[j] = temp;
     }
-    
-    printf("%s",s);
+
+    printf("%s", s);
     printf("\n");
 }

@@ -1,10 +1,11 @@
-//wapt count num even and odd digits the given int num.
+// wapt count num even and odd digits the given int num.
 
-#include<stdio.h>
+#include <stdio.h>
 
 void countEvenOdd(int);
 
-int main() {
+int main()
+{
     int x;
 
     printf("Enter the X value : ");
@@ -15,14 +16,19 @@ int main() {
     return 0;
 }
 
-void countEvenOdd(int x) {
+void countEvenOdd(int x)
+{
     int evenCount = 0, oddCount = 0, num;
 
-    while (x != 0) {
+    while (x != 0)
+    {
         num = x % 10;
-        if (num % 2 == 0) {
+        if (num % 2 == 0)
+        {
             evenCount++;
-        } else {
+        }
+        else
+        {
             oddCount++;
         }
         x /= 10;

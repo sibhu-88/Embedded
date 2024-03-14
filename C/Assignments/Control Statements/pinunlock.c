@@ -1,15 +1,15 @@
-//WRITE APROG TO UNLOCK YOUR PHONE BY ENTER A RIGHT PIN NUMBER , IF USER PIN IS WRONG THEN GIVE 5 CHANCES TO ENTER IT IN A RIGHT WAY! , IF 5 CHANCES ARE COMPLEATED WITH WRONG PIN NUMBER WAIT FOR 30sec TO RE-ENTER THE PIN NUMBER
-#include<stdio.h>
-#include<unistd.h>
+// WRITE APROG TO UNLOCK YOUR PHONE BY ENTER A RIGHT PIN NUMBER , IF USER PIN IS WRONG THEN GIVE 5 CHANCES TO ENTER IT IN A RIGHT WAY! , IF 5 CHANCES ARE COMPLEATED WITH WRONG PIN NUMBER WAIT FOR 30sec TO RE-ENTER THE PIN NUMBER
+#include <stdio.h>
+#include <unistd.h>
 int main()
 {
-	int root=1212,user,i=0;
+	int root = 1212, user, i = 0;
 
-	again:
+again:
 	printf("Enter Your pin number here ==> ");
-	scanf("%d",&user);
+	scanf("%d", &user);
 
-	if(root==user)
+	if (root == user)
 	{
 		sleep(1);
 		puts("You unlocked the Phone");
@@ -17,7 +17,7 @@ int main()
 	else
 	{
 		i++;
-		if(5>i)
+		if (5 > i)
 		{
 			puts("You Entered the Wrong pin , Try it Again");
 			goto again;
@@ -28,5 +28,4 @@ int main()
 			goto again;
 		}
 	}
-
 }

@@ -1,10 +1,11 @@
-//wap to check the given int num is palindrom num or not.
+// wap to check the given int num is palindrom num or not.
 
-#include<stdio.h>
+#include <stdio.h>
 
 void checkPalindrome(int);
 
-int main() {
+int main()
+{
     int x;
 
     printf("Enter the X value : ");
@@ -15,18 +16,23 @@ int main() {
     return 0;
 }
 
-void checkPalindrome(int n) {
+void checkPalindrome(int n)
+{
     int reverseNum = 0, originalNum = n;
 
-    while (n != 0) {
+    while (n != 0)
+    {
         int digit = n % 10;
         reverseNum = reverseNum * 10 + digit;
         n /= 10;
     }
 
-    if (originalNum == reverseNum) {
+    if (originalNum == reverseNum)
+    {
         printf("Yes, It is a palindrome number\n");
-    } else {
+    }
+    else
+    {
         printf("No, It is not a palindrome number\n");
     }
 }

@@ -1,10 +1,11 @@
-//WRITE A PROG TO SWAP TWO INT NUMBER USING BITWISE OPERATOR USE ONLY '^' OPERATION.
+// WRITE A PROG TO SWAP TWO INT NUMBER USING BITWISE OPERATOR USE ONLY '^' OPERATION.
 
-#include<stdio.h>
+#include <stdio.h>
 
 void binary(int);
 
-int main() {
+int main()
+{
     int x, y;
     int pos = sizeof(x) * 8 - 1;
 
@@ -13,12 +14,14 @@ int main() {
 
     printf("Before swapping, x = %d\n", x);
     binary(x);
-    
+
     printf("Before swapping, y = %d\n", y);
     binary(y);
 
-    for (int i = 0; i <= pos; i++) {
-        if ((x >> i & 1) != (y >> i & 1)) {
+    for (int i = 0; i <= pos; i++)
+    {
+        if ((x >> i & 1) != (y >> i & 1))
+        {
             x ^= (1 << i);
             y ^= (1 << i);
         }
@@ -31,7 +34,8 @@ int main() {
     binary(y);
 }
 
-void binary(int num) {
+void binary(int num)
+{
     int pos = sizeof(num) * 8 - 1;
     for (pos; pos >= 0; pos--)
         printf("%d", (num >> pos) & 1);
