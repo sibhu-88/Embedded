@@ -1,3 +1,8 @@
+/**********************************************************
+Expt. *** : 4X4 keypad interfacing with to LPC2129
+Platform  : LPC2129 Development Board.
+Date      : 18/03/2024
+**********************************************************/
 #include <LPC21xx.H>
 #include "E:\v23ce5s9\SIVA\ARM\EMBEDDED\Header\4bit_lcd.h"
 #define C0 (IOPIN0 &(1<<2))
