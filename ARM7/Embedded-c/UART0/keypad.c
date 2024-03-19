@@ -1,32 +1,28 @@
-/**********************************************************
-Expt. *** : 4X4 keypad interfacing with to LPC2129
-Platform  : LPC2129 Development Board.
-Date      : 18/03/2024
-**********************************************************/
 #include <LPC21xx.H>
 #include "E:\v23ce5s9\SIVA\ARM\EMBEDDED\Header\4bit_lcd.h"
-#define C0 (IOPIN0 &(1<<2))
-#define C1 (IOPIN0 &(1<<3))
-#define C2 (IOPIN0 &(1<<4))
-#define C3 (IOPIN0 &(1<<5))
+#define C0 (IOPIN0 &(1<<12))
+#define C1 (IOPIN0 &(1<<13))
+#define C2 (IOPIN0 &(1<<14))
+#define C3 (IOPIN0 &(1<<15))
 
-#define R0 1<<6
-#define R1 1<<7
-#define R2 1<<8
-#define R3 1<<9
+#define R0 1<<16
+#define R1 1<<17
+#define R2 1<<18
+#define R3 1<<19
 
 U32 KEY_LUT[4][4]={{1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,16}};
 
 U32 KEYSCAN(void);
 
 int main(){
+	int key;
 	LCD_INIT();
-	LCD_STR("4X4 KEYPAD");
 	while(1){
+		LCD_CMD(0X80);
+	  LCD_STR("4X4 KEYPAD");
+		key = KEYSCAN();
 		LCD_CMD(0XC5);
-		LCD_INTEGER(KEYSCAN());
-		delay_sec(2);
-		LCD_CMD(0X01);
+		LCD_INTEGER(key);
 	}
 }
 
@@ -35,13 +31,14 @@ U32 KEYSCAN(void){
 	IODIR0 |= R0|R1|R2|R3;
 	
 	while(1){
+		
 		IOCLR0 |= R0|R1|R2|R3;
 		IOSET0 |= C0|C1|C2|C3;
 		while((C0 && C1 && C2 && C3)==1);
 		
 		IOCLR0 |= R0;
 		IOSET0 |= R1|R2|R3;
-		if((C0 && C1 && C2 && C3)==0);
+		if((C0 && C1 && C2 && C3)==0)
 		{
 			ROW_VAL =0;
 			break;
@@ -49,7 +46,7 @@ U32 KEYSCAN(void){
 		
 		IOCLR0 |= R1;
 		IOSET0 |= R0|R2|R3;
-		if((C0 && C1 && C2 && C3)==0);
+		if((C0 && C1 && C2 && C3)==0)
 		{
 			ROW_VAL =1;
 			break;
@@ -57,7 +54,7 @@ U32 KEYSCAN(void){
 		
 		IOCLR0 |= R2;
 		IOSET0 |= R1|R0|R3;
-		if((C0 && C1 && C2 && C3)==0);
+		if((C0 && C1 && C2 && C3)==0)
 		{
 			ROW_VAL =2;
 			break;
@@ -65,7 +62,7 @@ U32 KEYSCAN(void){
 		
 		IOCLR0 |= R3;
 		IOSET0 |= R1|R2|R0;
-		if((C0 && C1 && C2 && C3)==0);
+		if((C0 && C1 && C2 && C3)==0)
 		{
 			ROW_VAL =3;
 			break;
@@ -81,7 +78,7 @@ U32 KEYSCAN(void){
 	else if(C3==0)
 		COL_VAL = 3;
 	
-		delay_milisec(150);
+		delay_milisec(250);
 	while((C0 && C1 && C2 && C3)==0);
 	return KEY_LUT[ROW_VAL][COL_VAL];
 }
