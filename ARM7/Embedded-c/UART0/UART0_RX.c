@@ -5,9 +5,9 @@
 
 // Function prototypes
 void UART0_INIT(void);
-void UART0_TX(unsigned char);
-unsigned char UART0_RX(void);
-void UART0_STR(unsigned char *);
+void UART0_TX(U8);
+U8 UART0_RX(void);
+void UART0_STR(U8 *);
 
 int main()
 {
@@ -30,7 +30,7 @@ void UART0_INIT(void)
 }
 
 // Transmit a character via UART0
-void UART0_TX(unsigned char D)
+void UART0_TX(U8 D)
 {
     while (!(U0LSR & (1 << 5)))
         ;      // Wait until THR is empty
@@ -46,7 +46,7 @@ unsigned char UART0_RX(void)
 }
 
 // Transmit a string via UART0
-void UART0_STR(unsigned char *S)
+void UART0_STR(U8 *S)
 {
     while (*S != '\0')
     {

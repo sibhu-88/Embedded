@@ -11,10 +11,10 @@ Date      : 18/03/2024
 
 // Function prototypes
 void UART0_INIT(void);
-void UART0_TX(unsigned char);
-void UART0_STR(const unsigned char *);
-void GSM_SMS(unsigned char *, unsigned char *);
-unsigned char UART0_RX(void);
+void UART0_TX(U8);
+void UART0_STR(const U8 *);
+void GSM_SMS(U8 *, U8 *);
+U8 UART0_RX(void);
 
 int main() {
     // Initialize UART0
@@ -28,7 +28,7 @@ int main() {
 }
 
 // Send SMS using GSM module
-void GSM_SMS(unsigned char *num1, unsigned char *msg) {
+void GSM_SMS(U8 *num1, U8 *msg) {
 	delay_milisec(1000); 
     // Send "AT" command to check connection
     UART0_STR("AT\r\n");
@@ -69,19 +69,19 @@ void UART0_INIT(void) {
 }
 
 // Transmit a character via UART0
-void UART0_TX(unsigned char D) {
+void UART0_TX(U8 D) {
     while (!(U0LSR & (1 << 5))); // Wait until THR is empty
     U0THR = D;                     // Transmit the character
 }
 
 // Transmit a string via UART0
-void UART0_STR(const unsigned char *S) {
+void UART0_STR(const U8 *S) {
     while (*S != '\0') {
         UART0_TX(*S++); // Transmit each character of the string
     }
 }
 // Receive a character via UART0
-unsigned char UART0_RX(void) {
+U8 UART0_RX(void) {
     while (!(U0LSR & (1 << 0))); // Wait until RBR has valid data
     return U0RBR;                // Return received character
 }
