@@ -1,14 +1,14 @@
-#define C0 (IOPIN0 &(1<<12))
-#define C1 (IOPIN0 &(1<<13))
-#define C2 (IOPIN0 &(1<<14))
-#define C3 (IOPIN0 &(1<<15))
+#define C0 (IOPIN0 &(1<<16))
+#define C1 (IOPIN0 &(1<<17))
+#define C2 (IOPIN0 &(1<<18))
+#define C3 (IOPIN0 &(1<<19))
 
-#define R0 1<<16
-#define R1 1<<17
-#define R2 1<<18
-#define R3 1<<19
+#define R0 1<<20
+#define R1 1<<21
+#define R2 1<<22
+#define R3 1<<23
 
-U8 KEY_LUT[4][4]={{1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,16}};
+U8 KEY_LUT[4][4]={{0,1,2,3},{4,5,6,7},{8,9,10,11},{12,13,14,15}};
 
 U8 KEYSCAN(void){
 	U8 ROW_VAL,COL_VAL;
