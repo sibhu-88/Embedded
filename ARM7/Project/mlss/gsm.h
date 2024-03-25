@@ -6,13 +6,10 @@ U8 P[4],G_OTP[4];
 void GSM(char *otp)
 {
     // Declare variables at the beginning of the function
-    U32 x;
-    T1TCR = 0X01;
-    // Initialize UART
-    UART_INIT();
-    
+    U32 x,i=0;
+   	while(i++<10000);
     // Generate random number
-    srand(T1PC);
+    srand(T1TC);
     x = rand() % (9999-1000)+1000;
 	sprintf(otp,"%d",x);
     // Send SMS
@@ -29,8 +26,8 @@ void GSM_SMS(U8 *num1, U8 *msg)
     UART_STR("AT\r\n");
     delay_sec(2); // Delay to allow GSM module to process command
 	
-// 		UART_STR("ATD9488289487;\r\n");
-// 	delay_sec(2);
+ //	UART_STR("ATD9488289487;\r\n");
+ //	delay_sec(2);
     // Set SMS text mode
     UART_STR("AT+CMGF=1\r\n");
     delay_sec(2);
@@ -46,4 +43,3 @@ void GSM_SMS(U8 *num1, U8 *msg)
     UART_STR(msg); // Send each character of the message
      UART_TX(0x1A); // End of message transmission (Ctrl+Z)
 }
-
