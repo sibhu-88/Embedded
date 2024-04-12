@@ -5,8 +5,7 @@
 void non_alp_remove(char *);
 int main()
 {
-    char s[100], ch;
-    int n;
+    char s[100];
 
     printf("Enter the string : ");
     scanf("%[^\n]", s);
