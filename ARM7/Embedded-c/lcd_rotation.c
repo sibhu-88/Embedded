@@ -15,19 +15,19 @@ void LCD_Rotation(U8 *R)
     {
        for ( i = 0; i <= 16; i++)
        {	LCD_Cmd(0x01);
-					LCD_Cmd(0x80+i);
-          LCD_Str(R);
-					delay_milisec(500);
-			 }
+		LCD_Cmd(0x80+i);
+                LCD_Str(R);
+		delay_milisec(500);
+	}
 			 
-			 for ( i = 0; l>0; i++,l--)
-       {	
-				 LCD_Cmd(0x01);
-				 LCD_Cmd(0x80+i);
-        		 LCD_Str(R);
-				 LCD_Cmd(0x80);
-				 LCD_Str(R+1);
-				 delay_milisec(500);
-			 }
+	for ( i = 0; l>0; i++,l--)
+        {	
+		 LCD_Cmd(0x01);
+		 LCD_Cmd(0x80+i);
+		 LCD_Str(R);
+		 LCD_Cmd(0x80);
+		 LCD_Str(R+1);
+		 delay_milisec(500);
+	}
     }
 }
