@@ -9,7 +9,7 @@
 void LCD_INIT(void);
 void LCD_CMD(U32);
 void LCD_DATA(U32);
-void LCD_STR(U8 *);
+void LCD_STR(S8 *);
 void LCD_INTEGER(S32);
 void LCD_FLOAT(float);
 
@@ -64,7 +64,7 @@ void LCD_DATA(U32 D)
 	IOCLR1 = E;
 }
 
-void LCD_STR(U8 *S)
+void LCD_STR(S8 *S)
 {
 	U8 ct = 0;
 	while (*S)
