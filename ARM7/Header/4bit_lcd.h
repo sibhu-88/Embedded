@@ -24,7 +24,7 @@ void LCD_INIT(void)
 }
 void LCD_CMD(U32 C)
 {
-	//---UPPER NIPPILE----//
+	//---UPPER NIBBLE----//
 	IOCLR1 = LCD;
 	IOSET1 = (C & 0XF0) << 16;
 	IOCLR1 = RS;
@@ -33,7 +33,7 @@ void LCD_CMD(U32 C)
 	delay_milisec(2);
 	IOCLR1 = E;
 
-	//---LOWER NIPPILE----//
+	//---LOWER NIBBLE----//
 	IOCLR1 = LCD;
 	IOSET1 = (C & 0X0F) << 20;
 	IOCLR1 = RS;
