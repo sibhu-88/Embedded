@@ -72,7 +72,7 @@ void LCD_STR(S8 *S)
 		LCD_DATA(*S++);
 		ct++;
 		if (ct == 16)
-			LCD_CMD(0x0c);
+			LCD_CMD(0xC0);
 	}
 }
 
