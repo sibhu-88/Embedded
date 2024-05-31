@@ -29,7 +29,7 @@ int main()
 char *str_cmp(char *s1, char *s2, int n) //==> user-define function;
 {
     int i;
-    for ( i = 0; (i < n )&&s[i]&&s[i]; i++)
+    for ( i = 0; (i < n )&&s1[i]&&s2[i]; i++)
     {
         if (s1[i]!=s2[i])
         break;

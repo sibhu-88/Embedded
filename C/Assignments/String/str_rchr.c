@@ -28,10 +28,10 @@ char *str_rchr(char *s,char ch)
     int i,j;
 
     for ( i = 0; s[i]; i++);
-    for ( j = i-1; j>=0; j--)
+    for ( --i; i>=0; i--)
     {
-        if (ch==s[j])
-        return s+j;
+        if (ch==s[i])
+        return s+i;
     }
     return NULL;
 }
