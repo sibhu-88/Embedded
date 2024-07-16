@@ -11,10 +11,6 @@
 - DC Motor
 - Buzzer
 
-## Block Diagram
-
-![BLOCK DIAGRAM](https://prod-files-secure.s3.us-west-2.amazonaws.com/029d4868-d03c-4369-85a3-bf014b57e759/8a2c2088-d868-4595-af6a-6ef76f7d9695/BLOCK_DIAGRAM.png)
-
 ## System Overview
 
 The "Multilevel Security System" is designed to provide secure access control using a combination of a password and a one-time password (OTP) sent via SMS. Here’s how the system works:
