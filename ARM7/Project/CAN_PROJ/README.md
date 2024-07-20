@@ -1,4 +1,4 @@
-# Body Control Module (BCM) Using CAN Communication
+# Body Control Module (BCM) in Automobiles
 
 This project demonstrates the implementation of a Body Control Module (BCM) using CAN (Controller Area Network) communication with ARM microcontrollers. The BCM is responsible for controlling the left and right indicators and the wiper system in a vehicle. The system involves a network of four nodes, where one node acts as the transmitter and the remaining three nodes act as receivers.
 
