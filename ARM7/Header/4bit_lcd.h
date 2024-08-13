@@ -1,5 +1,6 @@
 #include "A:\Siva\Embedded\ARM7\Header\typedef.h"
 #include "A:\Siva\Embedded\ARM7\Header\delay.h"
+#include <string.h>
 
 #define LCD 0x0f << 20
 #define RS 1 << 17
@@ -106,4 +107,20 @@ void LCD_FLOAT(float F)
 	LCD_DATA('.');
 	temp = (F - temp) * 100;
 	LCD_INTEGER(temp);
+}
+
+void LCD_SCROLL(char* msg) {
+    int i, len = strlen(msg);
+
+    for (i = 0; i < len; i++) {
+        LCD_CMD(0x80); // Set cursor to the beginning
+        LCD_STR(msg + i); // Display from i-th character onwards
+        delay(2000000);
+
+        if (len - i < 16) {
+            LCD_CMD(0x80); // Set cursor to the beginning
+            LCD_STR(msg);
+            delay(2000000);
+        }
+    }
 }
