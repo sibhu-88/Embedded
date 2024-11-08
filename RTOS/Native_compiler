@@ -1,0 +1,23 @@
+Native compilation:
+
+1) apt-get update
+
+2) apt-get install libncurses-dev
+
+3) download the kernel source code from https://www.kernel.org/pub/linux/kernel/v3.x
+
+4) tar -xvf linux-3.19.8.tar.gz
+
+5) cd linux-3.19.8/
+
+6) make menuconfig
+
+7) make
+
+8) make modules
+
+9) make modules_install
+
+10) make install
+
+11) reboot

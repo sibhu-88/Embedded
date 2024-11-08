@@ -1,0 +1,58 @@
+#!/bin/bash
+
+# Set variables for kernel version and source directory
+KERNEL_VERSION="3.19.8"
+KERNEL_TAR="linux-$KERNEL_VERSION.tar.gz"
+KERNEL_SRC_DIR="linux-$KERNEL_VERSION"
+
+# Update package list
+echo "Updating package list..."
+sudo apt-get update -y
+
+# Install required dependencies
+echo "Installing required dependencies..."
+sudo apt-get install -y libncurses-dev
+
+# Download kernel source code if not already downloaded
+if [ ! -f "$KERNEL_TAR" ]; then
+  echo "Downloading Linux kernel source code version $KERNEL_VERSION..."
+  wget https://www.kernel.org/pub/linux/kernel/v3.x/$KERNEL_TAR
+else
+  echo "Kernel source code already downloaded."
+fi
+
+# Extract the kernel source if not already extracted
+if [ ! -d "$KERNEL_SRC_DIR" ]; then
+  echo "Extracting kernel source..."
+  tar -xvf $KERNEL_TAR
+else
+  echo "Kernel source already extracted."
+fi
+
+# Change into the kernel source directory
+cd $KERNEL_SRC_DIR || exit
+
+# Run kernel configuration tool
+echo "Running 'make menuconfig' to configure the kernel..."
+make menuconfig
+
+# Compile the kernel
+echo "Compiling the kernel..."
+make -j$(nproc)  # Use all available CPU cores to speed up the process
+
+# Compile kernel modules
+echo "Compiling kernel modules..."
+make modules
+
+# Install kernel modules
+echo "Installing kernel modules..."
+sudo make modules_install
+
+# Install the compiled kernel
+echo "Installing the kernel..."
+sudo make install
+
+# Reboot the system
+echo "Rebooting the system..."
+sudo reboot
+

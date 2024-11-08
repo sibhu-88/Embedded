@@ -1,0 +1,67 @@
+ CROSS-COMPILATION
+
+packages required to compile buildroot
+
+sudo apt-get update
+
+sudo apt-get install vim
+
+sudo apt-get install g++
+
+sudo apt-get install libncurses-dev
+
+sudo apt-get install texinfo
+
+sudo apt-get install git
+
+sudo apt-get install wget
+
+sudo apt-get install gtkterm
+
+1)
+
+Download Build-Root From:
+
+https://github.com/gamaral/rpi-buildroot
+
+download rpi-buildroot-rpi.zip
+
+$ mkdir cross_compile
+
+copy rpi-buildroot-rpi.zip to cross_compile/
+
+$ unzip rpi-buildroot-rpi.zip
+
+change to rpi-buildroot-rpi folder and use following commands
+
+$ cd rpi-buildroot-rpi/
+
+$ make raspberrypi2_defconfig
+
+$ make
+
+it will take around 1 hour to compile
+
+after make observe dl directory
+
+and observe image files in /output/images
+
+you will find the following folders
+
+1) rpi-firmware
+
+2) zImage
+
+3) rootfs.tar
+
+copy rpi-firmware and zImage to boot partition of sdcard
+
+and rootfs.tar to rootfs partition of sdcard
+
+Now connect the sdcard to raspberrypi and boot your raspberrypi
+
+In latest rpi-buildroot-rpi after compilation you will find sdcard.img
+
+copy sdcard.img in empty sdcard.
+
+After copying to sdcard ,insert the sdcard to raspberrypi and boot the raspberrypi.
