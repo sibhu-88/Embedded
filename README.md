@@ -1,33 +1,32 @@
-# Embedded Systems Repository
+<h1 align="center">Hi 👋, I'm SIVA PRABHU</h1>
+<h3 align="center">A Passionate Embedded Systems Developer from India</h3>
 
-## Overview
-Welcome to the **Embedded Systems** repository by **Siva Prabhu V**. This repository contains various projects, code snippets, and resources related to embedded systems, microcontroller programming, and real-time applications.
+<img align="right" alt="Coding" width="400" src="https://gist.githubusercontent.com/MedRedha/fd8e2481bde2610c96b9aafde543879c/raw/88624e8d31c4295973dcb7c900dacf0edc0a6d99/coding.gif" />
 
-## About Me
-I am an **Embedded Systems Trainer** and **Embedded Software Engineer** passionate about designing, developing, and troubleshooting embedded solutions. I specialize in microcontrollers, communication protocols, and real-time system development.
+### 🚀 About Me:
+- 🔧 **Embedded Systems Trainer & Developer**
+- 🌱 Currently Exploring **RTOS, IoT, CAN, Microcontrollers**
+- 💡 Ask me about **Embedded C, ARM, Protocols**
+- 📫 Contact: **imsivaprabhu08@gmail.com**
+- ⚡ Fun fact: **I Think I am Funny! 😄**
 
-## Skills & Technologies
-- **Programming Languages:** C, C++, Embedded C
-- **Microcontrollers:** ARM7 (LPC2129), 8051, ESP8266
-- **Communication Protocols:** CAN, I2C, UART, SPI, RS232
-- **Operating Systems & Tools:** Linux, RTOS, TCP/IP
-- **Development Tools:** Keil, Flash Magic, ISP, Proteus, CAPL
+### 🛠️ Technologies & Tools:
+<p align="left">
+  <img src="https://cdn.worldvectorlogo.com/logos/arduino-1.svg" alt="Arduino" width="40" height="40"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="C" width="40" height="40"/>
+  <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="Git" width="40" height="40"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="Linux" width="40" height="40"/>
+</p>
 
-## How to Use This Repository
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/sibhu-88/Embedded.git
-   ```
-2. Navigate to the project directory of interest.
-3. Follow the instructions provided in each project folder.
+### 📊 GitHub Stats:
+<p align="left">
+  <img src="https://github-readme-stats.vercel.app/api?username=sibhu-88&show_icons=true&theme=radical" alt="GitHub Stats" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=sibhu-88&theme=radical" alt="GitHub Streak Stats" />
+</p>
 
-## Contact Me
-📧 **Email:** [imsivaprabhu08@gmail.com](mailto:imsivaprabhu08@gmail.com)
-
-🔗 **LinkedIn:** [Siva Prabhu V](https://www.linkedin.com/in/sivaprabhu-v/)
-
-🐙 **GitHub:** [sibhu-88](https://github.com/sibhu-88)
-
----
-
-📌 *Feel free to explore, contribute, or reach out for collaboration!*
+### 🔗 Connect With Me:
+<p align="left">
+  <a href="https://www.linkedin.com/in/sivaprabhu-v/" target="_blank">
+    <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="LinkedIn" width="40" height="40"/>
+  </a>
+</p>
